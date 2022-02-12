@@ -1,0 +1,19 @@
+
+syntax = "proto2";
+
+message APRSPosition {
+	required float latitude = 1;
+	required float longitude = 2;
+	optional int32 speed = 3;
+	optional int32 course = 4;
+	optional int32 heading = 5;
+	optional int32 altitude = 6;
+}
+
+message APRSMessage {
+	optional APRSPosition position = 1;
+	optional string symbol = 2;
+	optional int64 timestamp = 3;
+	optional string comment = 10;
+}
+
